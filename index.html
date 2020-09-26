@@ -7,7 +7,8 @@
       <a-assets>
         <audio
           id="river"
-          src="https://cdn.glitch.com/99491a25-5d78-4952-9c3d-e9ebc7021cdf%2FBeautiful-cinematic-piano-background-music.mp3?v=1601124145086"
+          src="https://cdn.glitch.com/99491a25-5d78-4952-9c3d-e9ebc7021cdf%2FBeautiful-cinematic-piano-background-music.mp3"
+          crossorigin="anonymous"
           preload="auto"
         ></audio>
       </a-assets>
@@ -19,7 +20,6 @@
         radius="0.5"
         height="1.5"
         color="#FFC65D"
-        sound="src: #river.mp3; autoplay: true; loop: true"
       ></a-cylinder>
       <a-plane
         position="0 0 -4"
@@ -28,7 +28,10 @@
         height="4"
         color="#7BC8A4"
       ></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+      <a-sky
+        color="#ECECEC"
+        sound="src: #river.mp3; autoplay: true; loop: true"
+      ></a-sky>
     </a-scene>
   </body>
 </html>
