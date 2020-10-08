@@ -1,1 +1,48 @@
-<a-entity obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FFinalBaseMesh.obj?v=1602177368722" scale="0.1 0.1 0.1" rotation="0 90 0"></a-entity>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img
+          id="sky"
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FGrid5-02.png?v=1602148117627"
+          radius="10000"
+        />
+        <video
+          id="vid"
+          autoplay
+          muted
+          playsinline
+          crossorigin="anonymous"
+          loop="true"
+          src="https://cdn.glitch.com/1473af6a-4d6f-4ae1-aa14-9106f5d09a16%2Fvid360.mp4?v=1602150233439"
+        ></video>
+        <a-asset-item
+          id="human"
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FFinalBaseMesh.obj?v=1602177368722"
+        ></a-asset-item>
+      </a-assets>
+      <a-box position="0 1 -1" src="#vid"></a-box>
+       <a-entity obj-model="obj: #human"></a-entity>
+      <a-sky src="#sky"></a-sky>
+
+      <a-entity
+        id="music"
+        geometry="primitive: plane"
+        material="color: blue"
+        position="-10 0 0"
+        sound="src: url(https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2F395107__dbbaker01__cabled-mess-deep-06-low-machine-ambience-paulstretched.wav?v=1602072057353); autoplay: true; loop: true; volume: 1.0"
+      ></a-entity>
+
+      <a-entity
+        id="music2"
+        geometry="primitive: plane"
+        material="color: blue"
+        position="-10 0 0"
+        sound="src: url(https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2F93326__geraeusch__u-bahn-berlin-fahrt-ein-1.wav?v=1602175838836); autoplay: true; loop: true; volume: 2.5"
+      ></a-entity>
+    </a-scene>
+  </body>
+</html>
