@@ -60,7 +60,7 @@ function countdown(remainingMinutes, secondsPassed){
         s = 59
         remainingMinutes = remainingMinutes -1 // Verbleibende Minuten um eins reduzieren
         if(remainingMinutes == -1){ // Wenn es jetzt -1 ist war es vorher 0 => Zeit Abgelaufen und neu starten
-            remainingMinutes = minutesUntilTrainArrives-1 // -1 weil, weil s = 59 und daher statt zb 05:00 wäre dann 05:59, also falsch und ich keine Lust habe das jetzt vernnünftig zu machen :)
+            remainingMinutes = minutesUntilTrainArrives-1 // -1 weil, weil s = 59 und daher statt zb 05:00 wäre dann 05:59, also falsch und ich keine Lust habe das jetzt vernnuenftig zu machen :)
         }
     }
 
