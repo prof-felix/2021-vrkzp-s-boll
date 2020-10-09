@@ -24,6 +24,9 @@
           id="human"
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhuman.obj?v=1602241449511"
         ></a-asset-item>
+        <a-asset-item 
+          id="human-mtl" 
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhuman.mtl?v=1602241455421"></a-asset-item>
 
         <a-asset-item
           id="anzeige"
@@ -40,15 +43,15 @@
       <a-box position="0 0 0" src="#bahnhof" scale="100 100 100"></a-box>
 
       <a-entity
-        obj-model="obj: #human"
+        obj-model="obj: #human; mtl: #human-mtl"
         scale="0.4 0.4 0.4"
         rotation="0 90 0"
         position="1.88 0 -8.0"
       ></a-entity>
 
       <a-entity
-        obj-model="obj: #human"
-        scale="0.3 0.1 0.1"
+        obj-model="obj: #human; mtl: #human-mtl"
+        scale="0.3 0.3 0.3"
         rotation="0 250.00000000000003 0"
         position="-2.15655 0 5.65156"
       ></a-entity>
