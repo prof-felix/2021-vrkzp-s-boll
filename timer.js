@@ -5,15 +5,20 @@ const minutesUntilTrainArrives = 1 // Wie viele Minuten soll es dauern bis der T
 function startTimer(counter){
     var remainingMinutes = minutesUntilTrainArrives // noch verbleibende Minuten
 
-    var textElement = document.getElementById("text-uhr") // a-entity holen
+    //var textElement = document.getElementById("text-uhr") // a-entity holen
+    let textElements = Array.from(document.getElementsByClassName("text-uhr"))
     
     let time = padNumber(minutesUntilTrainArrives) + ":00"; // Text setzten
 
-    var textAttribute = textElement.getAttribute("text"); // Das Text-Attribut ist ein JS Objekt
-
-    textAttribute.value = time // Im "text"-Objekt ist der eigentliche Text im Feld "value" hinterlegt
+    var textAttribute; 
+  
+    textElements.forEach(textElement => {
+        textAttribute = textElement.getAttribute("text");
+        textAttribute.value = time // Im "text"-Objekt ist der eigentliche Text im Feld "value" hinterlegt
+        textElement.setAttribute("text", textAttribute)
     
-    textElement.setAttribute("text", textAttribute)
+    }); // Das Text-Attribut ist ein JS Objekt
+
     
      remainingMinutes-- // verbleibende Minuten um 1 reduzieren, da im nächsten durchlauf mit 59 weiter gemacht wird
 
@@ -23,10 +28,12 @@ function startTimer(counter){
         
         remainingMinutes = time[0] // Verbleibende Minuten aktualisieren
         
+        textElements.forEach(textElement => {
+          textAttribute.value = time[1] // Text setzen 
         
-        textAttribute.value = time[1] // Text setzen 
-        
-        textElement.setAttribute("text", textAttribute) 
+          textElement.setAttribute("text", textAttribute)
+        });
+         
         
         counter = (counter + 1) % 61; // Stellt sicher dass counter zw. 0 und 60 liegt
         // Etwas seltsam, muss aber sein, da bei Counter = 60 s von Hand auf 59 gesetzt wird
