@@ -1,9 +1,7 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
-    <script>
-      
-    </script>
+    
   </head>
   <body>
     <a-scene>
@@ -77,7 +75,7 @@
         sound="src: url(https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2F93326__geraeusch__u-bahn-berlin-fahrt-ein-1.wav?v=1602175838836); autoplay: true; loop: true; volume: 2.5"
       ></a-entity>
 
-      <a-text
+      <a-text onload="console.log('Was geht')"
         id="text-uhr"
         position="-0.25 2.784 -1.804"
         text="color: black;"
@@ -92,6 +90,7 @@
   <script>
     setTimeout(e => {
       document.getElementById("vid").play();
+      startTimer(0);
     }, 2000);
   </script>
   
