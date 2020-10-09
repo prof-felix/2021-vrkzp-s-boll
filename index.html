@@ -30,7 +30,16 @@
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FAnzeige.glb?v=1602228644082"
         ></a-asset-item>
       </a-assets>
+      
       <a-box position="0 1 -1" src="#vid"></a-box>
+      
+      <a-sphere
+        radius="5"
+        position="1 0 0"
+        scale="100 100 100"
+        material="src: #sky; side: back; opacity: 1; transparent: true"
+      ></a-sphere>
+
       <a-entity
         obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FFinalBaseMesh.obj?v=1602177368722"
         scale="0.1 0.1 0.1"
@@ -76,7 +85,7 @@
       ></a-entity>
 
       <a-text
-
+        id="text-uhr"
         class="text-uhr"
         position="0.684 6.654 -7.158"
         text="color: white;"
