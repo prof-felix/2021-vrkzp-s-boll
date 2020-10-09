@@ -2,10 +2,6 @@ let counter = 0 // Counter, wird nach pro Zeitintervall um 1 erhoeht
 const intervalMillis = 1000 // Intervall in Millisekunden, 1s = 1000ms
 const minutesUntilTrainArrives = 1 // Wie viele Minuten soll es dauern bis der Timer aud 0 ist?
 
-console.log("timer.js loaded")
-
-startTimer(counter)
-
 function startTimer(counter){
     var remainingMinutes = minutesUntilTrainArrives // noch verbleibende Minuten
 
