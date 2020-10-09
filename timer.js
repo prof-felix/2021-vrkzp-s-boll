@@ -3,12 +3,12 @@ const intervalMillis = 1000 // Intervall in Millisekunden, 1s = 1000ms
 const minutesUntilTrainArrives = 1 // Wie viele Minuten soll es dauern bis der Timer aud 0 ist?
 
 function startTimer(counter){
-    console.log("timer gestartet");
+    console.log("timer gestartet!!");
     
-  var remainingMinutes = minutesUntilTrainArrives // noch verbleibende Minuten
+    var remainingMinutes = minutesUntilTrainArrives; // noch verbleibende Minuten
 
     //var textElement = document.getElementById("text-uhr") // a-entity holen
-    let textElements = Array.from(document.getElementsByClassName("text-uhr"))
+    let textElements = Array.from(document.getElementsByClassName("text-uhr"));
     
     let time = padNumber(minutesUntilTrainArrives) + ":00"; // Text setzten
 
