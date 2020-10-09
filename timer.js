@@ -8,13 +8,13 @@ function startTimer(counter){
     var remainingMinutes = minutesUntilTrainArrives; // noch verbleibende Minuten
 
     //var textElement = document.getElementById("text-uhr") // a-entity holen
-    let textElements = Array.from(document.getElementsByClassName("text-uhr"));
+    let textElements = Array.from(document.getElementsByClassName("text-uhr")); // Alle Uhrenanzeigen holen und von HTMLCollection in Array umwandeln
     
     let time = padNumber(minutesUntilTrainArrives) + ":00"; // Text setzten
 
     var textAttribute; 
   
-    textElements.forEach(textElement => {
+    textElements.forEach(textElement => { // Text für jede Uhr setzen
         textAttribute = textElement.getAttribute("text");
         textAttribute.value = time // Im "text"-Objekt ist der eigentliche Text im Feld "value" hinterlegt
         textElement.setAttribute("text", textAttribute)
@@ -30,10 +30,9 @@ function startTimer(counter){
         
         remainingMinutes = time[0] // Verbleibende Minuten aktualisieren
         
-        textElements.forEach(textElement => {
+        textElements.forEach(textElement => { // Text aller Uhren aktualisieren
           textAttribute = textElement.getAttribute("text");
           textAttribute.value = time[1] // Text setzen 
-        
           textElement.setAttribute("text", textAttribute)
         });
          
