@@ -1,6 +1,8 @@
-let counter = 0 // Counter, wird nach pro Zeitintervall um 1 erhöht
+let counter = 0 // Counter, wird nach pro Zeitintervall um 1 erhoeht
 const intervalMillis = 1000 // Intervall in Millisekunden, 1s = 1000ms
 const minutesUntilTrainArrives = 1 // Wie viele Minuten soll es dauern bis der Timer aud 0 ist?
+
+console.log("timer.js loaded")
 
 startTimer(counter)
 
@@ -32,28 +34,28 @@ function startTimer(counter){
         
         counter = (counter + 1) % 61; // Stellt sicher dass counter zw. 0 und 60 liegt
         // Etwas seltsam, muss aber sein, da bei Counter = 60 s von Hand auf 59 gesetzt wird
-        // Daher gäbe es, würde man den counter nicht wieder erhöhen s = 59 zweimal 
-        // einmal wegen 59 - 60 = -1, was man braucht um die Minuten runterzuzählen aber auch die Zeit mm:00 zuzulassen
-        // andererseits wegen 59 - 0 = 1
+        // Daher gäbe es, wuerde man den counter nicht wieder erhöhen s = 59 zweimal 
+        // einmal wegen 59 - 60 = -1, was man braucht um die Minuten runterzuzaehlen aber auch die Zeit mm:00 zuzulassen
+        // andererseits wegen 59 - 0 = 59
         if (counter == 0){
             counter++
         }
          
     },intervalMillis)
 }
-// Für einstellige Zahlen eine führende Null hinzufügen
+// Für einstellige Zahlen eine fuehrende Null hinzufügen
 function padNumber(number){
-    stringNumber = number+""
+    let stringNumber = number+""
     if (stringNumber.length < 2){
         stringNumber = "0"+stringNumber
     }
     return stringNumber 
 }
 //Eingabe: Die verbleibenden Minuten, die vergangenen Sekunden
-//Ausgabe: 0: Die verbleibenden Minuten, 1: Die verbleibende Zeit inkl. führender Nullen falls einstellig
+//Ausgabe: 0: Die verbleibenden Minuten, 1: Die verbleibende Zeit inkl. fuehrender Nullen falls einstellig
 // Diese reduziert eine Zeitangabe in der Form mm:ss um eine Sekunde, bis 00:00 erreicht ist
 function countdown(remainingMinutes, secondsPassed){
-    s = (59-secondsPassed) // verbleibende Sekunden
+    let s = (59-secondsPassed) // verbleibende Sekunden
     if(s == -1){ // Wenn s jetzt -1 ist war es vorher 0 => wir brauchen 59
         s = 59
         remainingMinutes = remainingMinutes -1 // Verbleibende Minuten um eins reduzieren
