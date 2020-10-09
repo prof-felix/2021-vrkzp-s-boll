@@ -23,7 +23,7 @@
           id="human"
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FFinalBaseMesh.obj?v=1602177368722"
         ></a-asset-item>
-        
+
         <a-asset-item
           id="anzeige"
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fanzeigetafel.obj?v=1602202053698"
@@ -43,9 +43,19 @@
         rotation="0 250.00000000000003 0"
         position="-2.15655 0 5.65156"
       ></a-entity>
-      
-     <a-entity obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fanzeigetafel.obj?v=1602202053698" scale="0.1 0.1 0.1" rotation="-90 180 0" position="1 6.9 11"></a-entity>
-       <a-entity obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fanzeigetafel.obj?v=1602202053698" scale="0.1 0.1 0.1" rotation="-90 0 0" position="-1 6.9 -11"></a-entity>
+
+      <a-entity
+        obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fanzeigetafel.obj?v=1602202053698"
+        scale="0.1 0.1 0.1"
+        rotation="-90 180 0"
+        position="1 6.9 11"
+      ></a-entity>
+      <a-entity
+        obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fanzeigetafel.obj?v=1602202053698"
+        scale="0.1 0.1 0.1"
+        rotation="-90 0 0"
+        position="-1 6.9 -11"
+      ></a-entity>
       <a-sky src="#sky"></a-sky>
 
       <a-entity
@@ -64,8 +74,13 @@
         sound="src: url(https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2F93326__geraeusch__u-bahn-berlin-fahrt-ein-1.wav?v=1602175838836); autoplay: true; loop: true; volume: 2.5"
       ></a-entity>
 
-      <a-text id="text-uhr"> </a-text>
+      <a-text
+        id="text-uhr"
+        position="-0.25 2.784 -1.804"
+        text="color: black; value: fucking timer"
+      ></a-text>
     </a-scene>
+    <script src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Ftimer.js?v=1602204303041"></script>
   </body>
   <script>
     setTimeout(e => {
