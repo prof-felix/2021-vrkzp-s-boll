@@ -5,7 +5,12 @@
   <body>
     <a-scene>
       <a-assets>
- 
+   <img
+          id="bahnhof"
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FGrid-01.png?v=1602232433896"
+          radius="10000"
+        />
+        
         <video
           id="vid"
           autoplay
@@ -25,15 +30,14 @@
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FAnzeige.glb?v=1602228644082"
         ></a-asset-item>
       </a-assets>
-
-      <a-sphere
+   <a-sphere
         radius="5"
         position="1 0 0"
         scale="100 100 100"
-        material="src: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FGrid-01.png?v=1602232433896; side: back; opacity: 1; transparent: true"
+        material="src: #vid; side: back; opacity: 1; transparent: true"
       ></a-sphere>
 
-      <a-box position="0 0 0" src="#vid" scale="100 100 100"></a-box>
+      <a-box position="0 0 0" src="#bahnhof" scale="100 100 100"></a-box>
 
       <a-entity
         obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FFinalBaseMesh.obj?v=1602177368722"
@@ -61,7 +65,6 @@
         rotation="0 0 0"
         position="-1 6.9 -11"
       ></a-gltf-model>
-      <a-sky src="#sky"></a-sky>
 
       <a-entity
         id="music"
@@ -90,6 +93,7 @@
         position="0.000 6.654 -7.158"
         text="color: white;"
       ></a-text>
+      
     </a-scene>
 
     <script src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Ftimer.js?v=1602204303041"></script>
@@ -102,11 +106,4 @@
     }, 2000);
   </script>
 </html>
-
-
-   <img
-          id="bahnhof"
-          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FGrid-01.png?v=1602232433896"
-          radius="10000"
-        />
 
