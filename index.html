@@ -15,12 +15,12 @@
           id="vid"
           autoplay
           muted
-          
+          playsinline
           crossorigin="anonymous"
           loop="true"
-          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fdrippo.mp4?v=1602199128374"
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fdrippo.mp4?v=1602440270983"
         ></video>
-        
+
         <video
           id="vid2"
           autoplay
@@ -55,7 +55,7 @@
         radius="5"
         position="1 -57.42489 -302"
         scale="5 0.00001 5"
-        material="src: #vid2; side: back; transparent: true"
+        material="src: #vid; side: back; transparent: true"
         geometry=""
       ></a-sphere>
 
@@ -63,7 +63,7 @@
         radius="5"
         position="1 -57.42489 -0.4"
         scale="10 0.00001 10"
-        material="src: #vid2; side: back; transparent: true"
+        material="src: #vid; side: back; transparent: true"
         geometry=""
       ></a-sphere>
 
@@ -71,7 +71,7 @@
         radius="5"
         position="1 -57.42489 252.02137"
         scale="5 0.00001 5"
-        material="src: #vid2; side: back; transparent: true"
+        material="src: #vid; side: back; transparent: true"
         geometry=""
       ></a-sphere>
 
@@ -162,6 +162,10 @@
         rotation="0 -180 0"
         text="color: white;"
       ></a-text>
+
+    <a-text value="U5" text="" scale="1.5 1.5 1.5">
+        position="-1.303 6.654 7.158" rotation="0 -180 0" text="color: white;"
+      </a-text>
     </a-scene>
 
     <script src="timer.js"></script>
