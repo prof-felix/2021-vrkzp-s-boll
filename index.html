@@ -5,12 +5,12 @@
   <body>
     <a-scene background="color: black">
       <a-assets>
-   <img
+        <img
           id="bahnhof"
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FGrid-01.png?v=1602232433896"
           radius="10000"
         />
-        
+
         <video
           id="vid"
           autoplay
@@ -24,40 +24,68 @@
           id="human"
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.obj?v=1602435120335"
         ></a-asset-item>
-        <a-asset-item 
-          id="human-mtl" 
-          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.mtl?v=1602435113972"></a-asset-item>
+        <a-asset-item
+          id="human-mtl"
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.mtl?v=1602435113972"
+        ></a-asset-item>
 
         <a-asset-item
           id="anzeige"
           src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2FAnzeige.glb?v=1602228644082"
         ></a-asset-item>
       </a-assets>
-   <a-sphere
+      <a-sphere
         radius="5"
         position="1 0 0"
         scale="100 100 100"
         material="src: #bahnhof; side: back; opacity: 1; transparent: true"
       ></a-sphere>
 
-<a-box position="800 60 0" src="#vid" scale="100 150 550" material="" geometry=""></a-box>
-<a-box position="-800 62.456 0" src="#vid" scale="100 150 550" material="" geometry=""></a-box>
+      <a-box
+        position="800 60 0"
+        src="#vid"
+        scale="100 150 550"
+        material=""
+        geometry=""
+      ></a-box>
+      <a-box
+        position="-800 62.456 0"
+        src="#vid"
+        scale="100 150 550"
+        material=""
+        geometry=""
+      ></a-box>
+   <a-box position="15.80452 -200 57.99622" src="#vid" scale="600 150 550" material="" geometry=""></a-box>
       <a-entity
         obj-model="obj: #human"
         scale="0.3 0.3 0.3"
         rotation="0 90 0"
         position="1.88 0 -8.0"
-        material="color: darkslateblue"
+        material="shader: flat; color: darkslateblue"
       ></a-entity>
-      
-     <a-entity obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.obj?v=1602435120335" scale="0.3 0.3 0.3" rotation="0 45 0" position="0.65519 0 -3.01132" material="color: darkslateblue"></a-entity>
+
+      <a-entity
+        obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.obj?v=1602435120335"
+        scale="0.3 0.3 0.3"
+        rotation="0 80 0"
+        position="0.73772 0 1.65351"
+        material="shader: flat; color: darkslateblue"
+      ></a-entity>
+
+      <a-entity
+        obj-model="obj: https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.obj?v=1602435120335"
+        scale="0.3 0.3 0.3"
+        rotation="0 45 0"
+        position="-0.77145 0 -3.01132"
+        material="shader: flat; color: darkslateblue"
+      ></a-entity>
 
       <a-entity
         obj-model="obj: #human"
         scale="0.3 0.3 0.3"
         rotation="0 250.00000000000003 0"
         position="-2.15655 0 5.65156"
-        material="color: darkslateblue"
+        material="shader: flat; color: darkslateblue"
       ></a-entity>
 
       <a-gltf-model
@@ -101,7 +129,6 @@
         rotation="0 -180 0"
         text="color: white;"
       ></a-text>
-      
     </a-scene>
 
     <script src="timer.js"></script>
@@ -114,4 +141,3 @@
     }, 2000);
   </script>
 </html>
-
