@@ -22,11 +22,11 @@
         ></video>
         <a-asset-item
           id="human"
-          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.glb?v=1602433857076"
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.obj?v=1602435120335"
         ></a-asset-item>
         <a-asset-item 
           id="human-mtl" 
-          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhuman.mtl?v=1602242484982"></a-asset-item>
+          src="https://cdn.glitch.com/11a604a1-b0f3-4dfe-ac39-15f8f6d86cad%2Fhumanfun.mtl?v=1602435113972"></a-asset-item>
 
         <a-asset-item
           id="anzeige"
@@ -42,19 +42,19 @@
 
 <a-box position="800 60 0" src="#vid" scale="100 150 550" material="" geometry=""></a-box>
 <a-box position="-800 62.456 0" src="#vid" scale="100 150 550" material="" geometry=""></a-box>
-      <a-gltf-model
-        src="#human"
+      <a-entity
+        obj-model="obj: #human; mtl: #human-mtl"
         scale="0.4 0.4 0.4"
         rotation="0 90 0"
         position="1.88 0 -8.0"
-      ></a-gltf-model>
+      ></a-entity>
 
-      <a-gltf-model
-        src="#human"
+      <a-entity
+        obj-model="obj: #human; mtl: #human-mtl"
         scale="0.3 0.3 0.3"
         rotation="0 250.00000000000003 0"
         position="-2.15655 0 5.65156"
-      ></a-gltf-model>
+      ></a-entity>
 
       <a-gltf-model
         src="#anzeige"
